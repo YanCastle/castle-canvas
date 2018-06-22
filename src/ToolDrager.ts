@@ -52,6 +52,7 @@ export default class ToolDrager {
                     if (this.itemClass instanceof UIElement) {
                         let classe: UIElement = this.itemClass;
                         this.item = new classe();
+                        // this.item = new UIElement();
                     } else {
                         this.item = this.itemClass();
                         if (!(this.item instanceof UIElement)) {

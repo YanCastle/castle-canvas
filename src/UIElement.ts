@@ -4,7 +4,7 @@ import Diagram from './Diagram';
 export default class UIElement {
     static __hitTestTolerance = 50;
     static __hitTestContext;
-    _events: Events;
+    _events: Events = new Events();
     _easyHit;
     x = 0;
     y = 0;
@@ -12,9 +12,6 @@ export default class UIElement {
     height = 0;
     visible = true;
     parent = null;
-    constructor() {
-        this._events = new Events();
-    }
     _onPaint(context, isLocal) {
         if (!this.visible) return;
         context.save();
